@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({label}) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <button class="btn">  {label}</button>
+    
   );
 }
 
-export default App;
+export default function MyApp(){return (
+ 
+
+  <div className="root-container">
+     <div id="Screen"></div>
+  <App label="7"/>
+<App label="8"/>
+<App label="9"/>
+<App label="/"/><br></br>
+    <App label="4"/> 
+<App label="5"/>
+<App label="6"/>
+<App label="x"/><br></br>
+<App label="1"/>
+<App label="2"/>
+<App label="3"/>
+<App label="-"/><br></br>
+<App label="OR"/>
+<App label="0"/>
+<App label="="/>
+<App label="+"/>
+  </div>
+);
+}
+
