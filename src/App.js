@@ -1,9 +1,12 @@
 import './App.css';
-
+import { useState } from 'react';
 function App({label}) {
+  const shoot = () => {
+    value(label);
+  }
   return (
 
-    <button class="btn">  {label}</button>
+    <button class="btn" onClick={shoot}>  {label}</button>
     
   );
 }
@@ -12,7 +15,8 @@ export default function MyApp(){return (
  
 
   <div className="root-container">
-     <div id="Screen"></div>
+     <input value={label} id="Screen"></input>
+     <div class="btn-body">
   <App label="7"/>
 <App label="8"/>
 <App label="9"/>
@@ -29,6 +33,7 @@ export default function MyApp(){return (
 <App label="0"/>
 <App label="="/>
 <App label="+"/>
+</div>
   </div>
 );
 }
